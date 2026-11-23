@@ -1,0 +1,66 @@
+name: Generate post index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "posts/**"
+      - "scripts/generate-index.js"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/generate-index.yml"
+  pull_request:
+    paths:
+      - "posts/**"
+      - "scripts/generate-index.js"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/generate-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: post-index-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run generate
+
+  publish:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run generate
+      - name: Commit changed index
+        run: |
+          git add posts/index.json
+          if git diff --cached --quiet; then
+            echo "Index is unchanged."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update post index" -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+            git push
+          fi

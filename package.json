@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "generate": "node scripts/generate-index.js"
+  },
+  "dependencies": {
+    "yaml": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
