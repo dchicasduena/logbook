@@ -6,7 +6,7 @@ date: 2026-11-23
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas tortor sed auctor suscipit. Nullam faucibus mi lectus, sit amet ornare quam elementum vitae. Nunc interdum neque laoreet massa malesuada, eget efficitur urna fringilla. Cras ultrices commodo luctus. Aliquam erat volutpat. Donec ultrices porta bibendum. Quisque luctus ut tellus a egestas. Ut eu pellentesque sem. Nulla facilisi. Sed quis mi elit.
 
-![image of orange](https://pin.it/1sGyl2Vmg)
+![image of bear](https://northshorebears.com/wp-content/uploads/2025/05/NSBBS_PROVIDED_BEAR-e1748639616661.png)
 
 Suspendisse dui turpis, sagittis nec ipsum eget, accumsan condimentum mi. Maecenas at tortor elementum, euismod ipsum non, maximus dui. Duis ornare lacus ligula, vel aliquam nisi porttitor quis. Sed venenatis, mauris eu luctus porttitor, ipsum magna fringilla mauris, quis imperdiet risus lacus quis ligula. Integer tincidunt sem a enim ullamcorper vulputate. Nam augue nisi, iaculis in vehicula ultrices, hendrerit eu metus. Integer et elit augue. Sed egestas purus ut orci viverra, non pharetra justo malesuada [davidchicas.me](https://davidchicas.me/). Maecenas auctor ut orci ac malesuada. Praesent at risus id arcu porttitor lacinia. In ultrices enim eu tincidunt aliquam. Mauris euismod lacus sit amet libero dictum, et porttitor est ultrices. Cras viverra quis risus eu efficitur. Morbi vel varius nibh, at porta orci. Fusce ultrices urna interdum enim interdum mattis.
 
