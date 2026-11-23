@@ -3,7 +3,6 @@
 markdown content source for some writing
 
 ## add a post
-
 1. create `posts/your-post-slug.md` 
 
    ```markdown
@@ -11,10 +10,8 @@ markdown content source for some writing
    title: post title
    date: 2026-11-23
    ---
-
    write your post here
    ```
-
 2. use a non-empty yaml string for `title` and a real calendar date in
    `YYYY-MM-DD` format for `date`.
 3. github actions will run `npm ci` and `npm run generate`after pushing to `main`
@@ -24,6 +21,21 @@ markdown content source for some writing
 and fetches each post at `https://raw.githubusercontent.com/dchicasduena/logbook/main/posts/<slug>.md`
 
 the index contains `{ "posts": [{ "slug": "...", "title": "...", "date": "YYYY-MM-DD" }] }` ordered newest first
+
+## add images
+
+1. put images in `images/`, optionally in a folder named after the post, such as
+   `images/your-post-slug/landscape.jpg`
+2. link to the image in the post using its absolute raw github url:
+
+   ```markdown
+   ![A mountain landscape](https://raw.githubusercontent.com/dchicasduena/logbook/main/images/your-post-slug/landscape.jpg)
+   ```
+
+3. commit the image and post together and push to `main`. the url works after
+   the image is on `main`
+
+most images here are either my own or in the public domain
 
 ## markdown cheatsheet
 
@@ -45,5 +57,5 @@ the index contains `{ "posts": [{ "slug": "...", "title": "...", "date": "YYYY-M
 
 `code`
 ---
-[link](https://davidchicas.me/)
-![alt text](https://dchicasduena.github.io/thirty-five-mm/assets/pictures/image-edited-04.jpg)
+[link](link)
+![alt text](link)
